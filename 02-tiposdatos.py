@@ -6,9 +6,9 @@ complejo = 1 +4j
 print("Impresion del numero complejo:",complejo)
 
 #OPERACION ARITMETICA BASICA
-imc = peso/estatura**2
+imc = peso/ (estatura**2)
 
-print("Mi imc es de:" ,imc)
+print("Mi imc es de: {:2f}".format(imc),"\n")
 
 #02- DATOS DE TIPO CADENA DE CARACTERES
 asignatura = "Programación"
@@ -18,6 +18,13 @@ print("Mi carrera es" ,carrera ,"y estoy en la asignatura de" ,asignatura)
 #03- VALORES BOOLEANOS
 ampolleta = False
 interruptor = True
+
+print(bool(0))
+print(bool(""))
+print(bool(None))
+print(bool("False"))
+print(bool(1))
+print("\n")
 
 #CON TYPE SABEMOS EL TIPO DE DATOS QUE ESTAMOS TRATANDO
 print(type(ampolleta))
@@ -70,3 +77,49 @@ print("Suma de listas",estudiantes + num)
 print(list("Python"))
 print(list(range(10)))
 print("\n")
+
+# > En el fichero de listas se mostraran más funciones
+
+#05 - Tuplas - (No mutables)
+newtupla = tuple()
+grupo1 = ("Daniel","Cristian","Felipe",200,100)
+
+
+diccionario1 = dict()
+diccionario2 = {}
+
+datos_personales = {
+    "Nombre":"Victor",
+    "Institucion":"Ulagos",
+    "Edad":29
+    }
+
+print(datos_personales)
+
+datos_personales = {
+    "Nombre":"Victor",
+    "Institucion":"Ulagos",
+    "Edad":29,
+    "Asignaturas": {"Estructura de Datos", "Programacion"}
+    }
+
+print("Diccionario inicial:",datos_personales)
+
+#Consulta la cantidad de elementos del Diccionario
+print(len(datos_personales))
+
+#Es facilmente accesible a los elementos dentro de un diccionario
+print(datos_personales["Institucion"])
+
+#¿Como actualizamos el valor de una clave dentro de un diccionario?
+datos_personales["Institucion"] = "USS"
+print("Diccionario actualizado:",datos_personales)
+
+#Agregando un nuevo campo al diccionario
+datos_personales["Ciudad"] = "Osorno"
+print(datos_personales)
+print("Diccionario con el nuevo campo:",datos_personales)
+
+#Eliminando un campo del diccionario
+del datos_personales["Ciudad"]
+print("diccionario con el campo eliminado", datos_personales)
